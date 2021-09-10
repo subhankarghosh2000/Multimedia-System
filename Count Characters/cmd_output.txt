@@ -1,0 +1,3 @@
+runfile('D:/Multimedia/Count Characters/count_characters_in_txt_file.py', wdir='D:/Multimedia/Count Characters')
+Number of characters in text file : 2706
+Number of words in text file : 507
