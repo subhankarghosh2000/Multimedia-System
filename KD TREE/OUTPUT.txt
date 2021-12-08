@@ -1,0 +1,1 @@
+{'point': [9, 1], 'left': {'point': [2, 7], 'left': {'point': [3, 6], 'left': None, 'right': None}, 'right': {'point': [6, 12], 'left': None, 'right': None}}, 'right': {'point': [17, 15], 'left': {'point': [13, 15], 'left': None, 'right': None}, 'right': {'point': [10, 19], 'left': None, 'right': None}}}

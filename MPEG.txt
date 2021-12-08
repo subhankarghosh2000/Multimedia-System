@@ -1,0 +1,44 @@
+MPEG full form is Moving Picture Experts Group. It is a working group of agencies to set standards for audio / video encoding and transmission. Develops audio video file formats known as MPEG.
+
+Function of MPEG :
+
+1.Storing audios in Compact disc(CD).
+2.Storing of videos on digital video tapes.
+
+Working of MPEG :
+
+MPEG follows an algorithm in which the data are compressed into small bits, so that they can be easily transmitted and decompressed and then encoded using “Discrete Cosine Transform”.The compression rate of MPEG is high because it doesn’t store the complete frame, it only stores the changes that has been done to the frames.Hence it reduce the size of overall file.
+
+MPEG Compression:
+
+Using MPEG compression, the file size of a multimedia file can be significantly reduced with little noticeable loss in quality. This makes transferring files over the Internet more efficient, which helps conserve Internet bandwidth. MPEG compression is so ubiquitous that the term "MPEG" is commonly used to refer to a video file saved in an MPEG file format rather than the organization itself. These files usually have a ".mpg" or ".mpeg" file extension.
+
+MPEG achieves its high compression rate by storing only the changes from one frame to another, instead of each entire frame. The video information is then encoded using a technique called Discrete Cosine Transform (DCT). MPEG uses a type of lossy compression, since some data is removed
+
+Steps of MPEG Compression:
+
+1.Reduction of the Resolution.
+2.Motion estimation.
+3.Discrete Cosine Transformation(DCT).
+4.Quantization
+5.Entropy Coding.
+
+Advantages of MPEG :
+
+1.MPEG files produces duplicate of the original files which are of very high quality.
+2.MPEG files format are compatible with most web browsers and can run on various platforms.
+
+Disadvantages of MPEG :
+
+1.Low compression ratio.
+2.Larger file sizes.
+3.Longer to open as the file size is large.
+
+The MPEG organization has produced a number of digital media standards since its inception in 1998. Examples include:
+
+MPEG-1 – Audio/video standards designed for digital storage media (such as an MP3 file)
+MPEG-2 – Standards for digital television and DVD video
+MPEG-4 – Multimedia standards for the computers, mobile devices, and the web
+MPEG-7 – Standards for the description and search of multimedia content
+MPEG-MAR – A mixed reality and augmented reality reference model
+MPEG-DASH – Standards that provide solutions for streaming multimedia data over HTTP (such as servers and CDNs)

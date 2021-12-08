@@ -1,0 +1,74 @@
+Synchronization in multimedia systems refers to temporal relationships between media objects in the multimedia systems. In future multimedia systems (based, e.g., on MPEG-4) synchronization may also refer to spatial and content relationships, as well as temporal.
+
+Synchronization between media objects comprises relationships between time-dependent media objects as well as time-independent media objects. Synchronization may need to occur at different levels in a multimedia system, consequently synchronization support is typically found in the operating system, communication system, databases, multimedia documents, and the application. A general scheme might involve a layered approach to achieving synchronization. Parties may make reference to objects on the shared whiteboard, using a pointer, to support what they are saying. Here, video and audio are continuous media objects which are highly periodic, whereas the shared whiteboard is a discrete media stream, as changes to it are highly irregular. The media streams must be highly synchronized, so that speech remains lip synchronized, and the whiteboard updates are synchronized with audio references to them.
+
+The operating system and lower levels of the communication system are responsible for ensuring that jitter on individual streams does not occur during presentation of the video, audio, and whiteboard streams (intermedia synchronization). At a higher level, the runtime support for the synchronization of multiple multimedia media streams must ensure that the various media streams remain synchronized with respect to each other (intermedia synchronization). Finally, the application(s) are responsible for ensuring synchronicity between application-level events (usually initiated by the users). For example, if the application at the source does not capture timing dependencies between a user waving the pointer over part of the object in the whiteboard and the supporting audio stream, then it will be impossible for the application at the sink to know that the whiteboard and audio events need to be synchronized.
+
+The temporal relations between media objects must be specified during capture of the media objects, if the goal of the presentation is to present media in the same way that they were originally captured. Synchronization information of events in an animation sequence or a slide show is usually specified by the designer, using, for example, a time-axis.
+
+A reference model is needed to understand the requirements of multimedia synchronization, identify and structure runtime mechanisms that can support these requirements, identify interfaces between runtime mechanisms, and compare solutions for multimedia synchronization systems. Each layer implements synchronization mechanisms which are provided by an appropriate interface. These interfaces can be used to specify or enforce the temporal relationships. Each interface can be used by the application directly, or by the next higher layer to implement an interface. Higher layers offer higher programming and QoS abstractions.
+
+Media Layer: -
+
+An application operates on a single continuous media stream, which is treated as a sequence of LDUs. Networking components must be taken into account. Provides access to files and devices.
+
+Stream Layer: -
+
+The stream layer operates on continuous media streams as well as groups of media streams. In a group, all streams are presented in parallel by using mechanisms for interstream synchronization. QoS parameters will specify interstream and interstream synchronization requirements.
+
+Continuous media is seen as a data flow with implicit time constraints; individual LDUs are not visible. An application using the stream layer is responsible for starting, stopping and grouping the streams, and for the definition of the required QoS in terms of timing parameters supported by the stream layer. It is also responsible for the synchronization with time-independent media objects. Tasks include resource reservation and LDU process scheduling.
+
+Object Layer: -
+
+The object layer operates on all media streams and hides the differences between continuous and discrete media. An application that interacts with this layer will be presented with a view of a complete, synchronized presentation. This layer takes a complete synchronization specification as its input and is responsible for the correct schedule of the overall presentation.
+
+Specification Layer: -
+
+This layer contains applications and tools that are allowed to create synchronization specifications (e.g., authoring tools, multimedia document editors).
+
+The specification layer is also responsible for mapping user-required QoS parameters to the qualities offered at the object layer interface.
+
+Synchronization specifications can be:
+
+1.Interval-based: specifications of the temporal relations between the time intervals of the presentation of media objects.
+2.Axes-based: allows presentation events to be synchronized according to shared axes, e.g., a global timer
+3.Control flow-based: at specified points in presentations, they are synchronized
+4.Event-based: Events in the presentation trigger presentation actions
+
+Synchronization in a Distributed Environment: -
+
+Synchronization in a distributed environment is complex, because there may be more than one source of multimedia data, and more than one sink consuming it. The synchronization information for the various media stream may also reside at different sources.
+
+Transport of the synchronization specification: -
+
+The sink needs to have the synchronization information available to correctly display an object. There are three main approaches to delivering the synchronization information to the sink:
+
+1.Delivery of the synchronization information before the start of the presentation
+2.Use of an additional synchronization channel
+3.Multiplexed data streams
+
+If the multimedia presentation is live and multiple parties are involved, then none of the approaches above is suitable for delivering synchronization information to the sink(s) in a timely fashion.
+
+Of particular interest here, is that if multiple sinks are involved, then they will receive identical data. It would be inefficient if the data were replicated at the source for separate transmission to each of the sinks. It would also be inefficient if the same operation was carried out at different sinks. Multicasting or broadcasting of streams is the responsibility of the stream layer, whereas efficient planning of operation execution in the different communication patterns is a responsibility of the object layer.
+
+Multi-Step Synchronization: -
+
+In a distributed environment, synchronization is typically a multi-step process, during which the synchronization must be maintained so as to enable the sink to perform the final synchronization. The synchronization steps are:
+
+1.during object acquisition, e.g., during frame digitization
+2.during retrieval, e.g., synchronized access to frames of a stored video
+3.during delivery of the LDUs to the network
+4.during the transport of the LDUs, e.g., using isochronous protocols
+5.at the sink, e.g., synchronized delivery to the output devices
+6.within the output device
+
+Synchronization Specification: -
+
+A synchronization specification should comprise:
+
+1.Intra-object synchronization specifications for the media objects of the presentation
+2.QoS descriptions for intra-object specifications
+3.Inter-object synchronization specifications for media objects of the presentation
+4.QoS descriptions for inter-object synchronization
+
+In addition, the form, or alternate forms, of a multimedia object may be described. For example, a text could be presented as text on the screen or as a generated audio sequence. In the case of live synchronizations, the temporal relations are implicitly defined during capture. QoS requirements are specified before the start of the capture. In the case of synthetic synchronization, the specification must be created explicitly.

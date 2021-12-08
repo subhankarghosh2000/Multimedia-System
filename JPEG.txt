@@ -1,0 +1,42 @@
+JPEG stands for Joint Photographic Experts Group.Mainly JPEG is a type of digital image compression. Also, it is known as a format of image, but this is completely false because JPEG is a technique of image compression, it is used for many file formats such as EPS, PDF, even TIFF files also. And the format similar to JPEG is JPG, many of us are thinking that these 2 are the same.
+
+This technique of image compression developed by the Joint Photography Experts Group so that its name is JPEG. This compression uses a lossy compression algorithm so that some information is removed from the image when compressing. The JPEG standard works by averaging color variation and discard the information that the human eye cannot see.
+
+JPEG is compressed into either full-color or grayscale images. In the case of color images, RGB is transformed into a luminance or chrominance color space. JPEG compression mainly works by identifying similar areas of color inside the image and converting them to actually the same color code. JPEG uses the DCT (Discrete Cosine Transform) method to compress for coding transformation.
+
+Steps of Compression:
+
+1.The raw image is first converted to a different color model, which separates the color of a pixel from its brightness.
+2.The image is divided into a small block which is having 8×8 block, each block is called pixel.
+3.Then RGB is converted into Y-Cb-Cr, JPEG uses a Y-Cb-Cr model instead of RGB.
+4.After that, DCT is applied to each block of pixels and converts the image from the spatial domain to the frequency domain.
+5.Then make the resulting image quantized, because human eyes can not see high frequency so to the make the is low quatization is applied.
+6.After quantization, zigzag scan is performed on these quantized 8×8 blocks to group the low-frequency coefficients.
+The coefficients is then encoded by Run Length and Huffman coding algorithm to get the final image.
+
+Characteristics of JPEG:
+
+1.The main characteristics of JPEG is that, it uses lossy compression technique, so that the size of the image is less.
+2.JPEG standard works by averaging color variation and discard the information what the human eye cannot see to reduce the size of the image. For this it is lossy compression.
+3.JPEG has an improved way to compress a file, that it automatically looks over the file and chooses the best way to compress it.
+4.JPEG can works with multiple files, that is, it can working on several image at the same time.
+
+Advantages of JPEG:
+
+1.It has very good compression rate, image quality, also has good transmission rate.
+2.JPEG standard is supports 24-bit color with up to 16 million colors, so the resolution in maximum level is superb.
+3.JPEG files are very small in size but according to the size the quality is not low. So we can save our disk space while store JPEG files without effecting the quality of the image.
+4.Image Processing time is much faster than other image standards.
+5.It is suitable for full-color realistic images with a lot of color and contrast transitions.
+6.JPEG is compatible with every computer, mobile devices, camera devices and also photo editors.
+7.The user can independently selects the ratio quality of the image in JPEG.
+8.There is no need of editing required to print any image, JPEG files can be printed directly from camera devices without editing.
+
+Disadvantages of JPEG:
+
+1.Image may loss important details from the image because of lossy compression, that is, the image is dived into 8×8 blocks, then much information is discarded.
+2.JPEG is not a flexible application, because JPEG is not efficient for image which contains texts, sharp lines or edges. JPEG is good for portraits and nature photographs mainly.
+3.Quality of image is reduced after JPEG compression, mainly for text based images. For other images its not effect so much if we are not see the image in detail.
+4.JPEG standard does not support opacity or transparency, most of the cases he transparent portion of any image is consider as white area in JPEG.
+5.JPEG does not handle Black & Whiteand motion pictures.
+6.JPEG images have less color depth than other image formats.
